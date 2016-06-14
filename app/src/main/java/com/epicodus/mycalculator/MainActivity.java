@@ -51,6 +51,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonMultiplication.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                double oper1 = Double.parseDouble(operand1.getText().toString());
+                double oper2 = Double.parseDouble(operand2.getText().toString());
+                double theResult = oper1 * oper2;
+                textResult.setText(Double.toString(theResult));
+            }
+        });
+
+        buttonDivision.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                double oper1 = Double.parseDouble(operand1.getText().toString());
+                double oper2 = Double.parseDouble(operand2.getText().toString());
+                double theResult = oper1 / oper2;
+                textResult.setText(Double.toString(theResult));
+            }
+        });
+
 
     }
 }
