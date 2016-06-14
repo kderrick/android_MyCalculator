@@ -40,5 +40,17 @@ public class MainActivity extends AppCompatActivity {
                 textResult.setText(Double.toString(theResult));
             }
         });
+
+        buttonSubtraction.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                double oper1 = Double.parseDouble(operand1.getText().toString());
+                double oper2 = Double.parseDouble(operand2.getText().toString());
+                double theResult = oper1 - oper2;
+                textResult.setText(Double.toString(theResult));
+            }
+        });
+
+
     }
 }
