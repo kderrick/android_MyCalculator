@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonSubtraction;
     private Button buttonMultiplication;
     private Button buttonDivision;
+    private Button buttonClear;
 
     private TextView textResult;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMultiplication = (Button) findViewById(R.id.buttonMultiplication);
         buttonDivision = (Button) findViewById(R.id.buttonDivision);
         textResult = (TextView) findViewById(R.id.textResult);
+        buttonClear = (Button) findViewById(R.id.buttonClear);
 
         buttonAddition.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -88,6 +90,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+        });
+
+        buttonClear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                operand1.setText("");
+                operand2.setText("");
+                textResult.setText("0.00");
+                operand1.requestFocus();
+            }
         });
 
 
